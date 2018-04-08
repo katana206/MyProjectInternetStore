@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ваша корзина</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="..." />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+<!--webfont-->
+<!-- dropdown -->
+<script src="js/jquery.easydropdown.js"></script>
+<link href="css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/scripts.js" type="text/javascript"></script>
+<!--js-->
+<!--	<script type="text/javascript">
+				function open(){
+			alert("Мы с вами свяжемся в течении 15 минут! Ожидайте для оформления заказа");
+			}
+			</script>-->
+</head>
+<body>
+<script src="js/responsiveslides.min.js"></script>
+<script>  
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: false,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+<div class="banner-bg banner-sec">	
+	  <div class="container">
+			 <div class="header">
+			       <div class="logo">
+						 <a href="index.html"><img src="images/logo.png" alt=""/></a>
+				   </div>							 
+				 <div class="top-nav">										 
+						<label class="mobile_menu" for="mobile_menu">
+						<span>Menu</span>
+						</label>
+						<input id="mobile_menu" type="checkbox">
+					   <ul class="nav">
+						  <li class="dropdown1"><a href="parts.html">Женские духи</a>
+						  </li>
+						  <li class="dropdown1"><a href="parts-man.html">Мужские духи</a>
+						 </li>                     
+						  <a class="shop" href="cart.html"><img src="images/cart.png" alt=""/></a>
+					  </ul>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+	  </div> 				 
+</div>
+<!--/banner-->
+<div class="cart">
+	 <div class="container">
+		 <div class="cart-top">
+			<a href="index.html">>>На главную</a>
+		 </div>	
+			
+		 <div class="col-md-9 cart-items">
+			 <h2>Моя корзина:</h2>
+				<script>$(document).ready(function(c) {
+					$('.close1').on('click', function(c){
+						$('.cart-header').fadeOut('slow', function(c){
+							$('.cart-header').remove();
+						});
+						});	  
+					});
+			   </script>
+			 <div class="cart-header">
+				 <div class="close1"> </div>
+				 <div class="cart-sec">
+						<div class="cart-item cyc">
+							 <img src="images/eclat_man.jpg"/>
+						</div>
+					   <div class="cart-item-info">
+							 <h3>Eclat for man<span>Код: 3498</span></h3>
+							 <h4><span>₴ </span>300.00</h4>
+							 <p class="qty">Количевство</p>
+							 <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+					   </div>
+					   <div class="clearfix"></div>
+						<div class="delivery">
+							 <span>Будет отправлено в течении 3-5 робочих дней</span>
+							 <div class="clearfix"></div>
+				        </div>						
+				  </div>
+			 </div>
+			 <script>$(document).ready(function(c) {
+					$('.close2').on('click', function(c){
+							$('.cart-header2').fadeOut('slow', function(c){
+						$('.cart-header2').remove();
+					});
+					});	  
+					});
+			 </script>		
+		 </div>
+		 
+		 <div class="col-md-3 cart-total">
+			 <a class="continue" href="index.html">Вернуться к товарам</a>
+			 <div class="price-details">
+				 <h3>Информация о цене:</h3>
+				 <span>Сумма(грн):</span>
+				 <span class="total">300.00</span>
+				 <span>Скидка:</span>
+				 <span class="total">---</span>
+				 <span>Плата за доставку:</span>
+				 <span class="total">50.00</span>
+				 <div class="clearfix"></div>
+			 </div>	
+			 <h4 class="last-price">Итого:</h4>
+			 <span class="total final">350.00</span>
+			 <div class="clearfix"></div>
+			<a class="order" href=""> Оформить заказ</a>
+	
+			</div>
+	 </div>
+</div>
+<!---->
+<div class="footer">
+
+		<div class="clearfix"></div>
+	 </div>
+</div>
+</body>
+</html>
+

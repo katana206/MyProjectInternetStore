@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Вход в магазин</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style_for_access.css" rel="stylesheet" type="text/css" media="all"/>
+
+</head>
+<body>
+
+
+<content id="main">
+
+ <form method="POST" action="cart.html"> 
+ <?php include_once 'access.php' ?>
+ <label for="login">Введите ваш логин:</label>
+ <input type="text" name="login"><br>
+ <label for="password">Введите ваш пароль:</label>
+ <input type="password" name="password"><br>
+ <input type="submit" name="enter" value="Вход"></input>
+</form>
+
+</content>
+
+
+
+
+
+
+</body>
+</html>

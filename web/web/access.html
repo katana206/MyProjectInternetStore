@@ -1,0 +1,47 @@
+<?php
+  session_start();
+?>
+<!DOCTYPE html> <!--standart html5-->
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sign-up.css" type="text/css">
+	<title>Регистрация</title>
+</head>
+<body>
+
+<content>
+ <form method="POST" action="enter.php"> 
+ <label for="login">Введите ваш логин:</label>
+ <input type="text" name="login"><br>
+ <label for="password">Введите ваш пароль:</label>
+ <input type="password" name="password"><br>
+ <input type="submit" name="enter" value="Вход"></input>
+</form>
+</content>
+
+
+<?php
+   if (isset($_POST['enter'])){
+	if(($_POST[login]=="") || ($_POST[password]==""))echo "<script>alert(\"Пустой логин или пароль!!!\");</script>";
+	else{	    
+		     $_SESSION['log'] = $_POST['login'];
+ 		     $_SESSION['password'] = $_POST['password'];
+ 		     $link = mysqli_connect("localhost", "root", "","store") or die("Ошибка!" . mysqli_error($link)); 
+		     $login = htmlentities(mysqli_real_escape_string($link,$_POST[login]));
+		$query ="SELECT * FROM users WHERE login='$login' "; 
+		$result = mysqli_query($link, $query) or die("Ошибка!" . mysqli_error($link)); 	
+		if (!$result) echo "<script>alert(\"Ошибка входа!\");</script>"; 
+  		else {
+			echo "<script>alert(\"Вход выполнен успешно!\");</script>";
+		}
+ 	}
+  }
+?>
+
+
+
+</body>
+</html>
+ 
